@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DeepLabCut User Guide (for single animal projects) &#8212; DeepLabCut</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,30 +31,35 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="DeepLabCut for Multi-Animal Projects" href="maDLC_UserGuide.html" />
     <link rel="prev" title="DeepLabCut Docker containers" href="docker.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -93,7 +98,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Main Documentation
  </span>
@@ -140,7 +145,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Tutorials
  </span>
@@ -162,7 +167,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Recipes
  </span>
@@ -203,8 +208,13 @@
    How to write a DLC Methods Section
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recipes/OpenVINO.html">
+   Intel OpenVINO backend
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Mission &amp; Contribute
  </span>
@@ -267,7 +277,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -301,7 +311,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -324,8 +334,8 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#important-path-formating-note">
-       Important path formating note:
+      <a class="reference internal nav-link" href="#important-path-formatting-note">
+       Important path formatting note:
       </a>
      </li>
     </ul>
@@ -437,17 +447,156 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>DeepLabCut User Guide (for single animal projects)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deeplabcut-project-manager-gui-recommended-for-beginners">
+   DeepLabCut Project Manager GUI (recommended for beginners)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deeplabcut-in-the-terminal">
+   DeepLabCut in the Terminal:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-create-a-new-project">
+     (A) Create a New Project
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#important-path-formatting-note">
+       Important path formatting note:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-configure-the-project">
+     (B) Configure the Project
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-data-selection-extract-frames">
+     (C) Data Selection (extract frames)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-label-frames">
+     (D) Label Frames
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-check-annotated-frames">
+     (E) Check Annotated Frames
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#f-create-training-dataset-s">
+     (F) Create Training Dataset(s)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#g-train-the-network">
+     (G) Train The Network
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#h-evaluate-the-trained-network">
+     (H) Evaluate the Trained Network
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#i-novel-video-analysis">
+     (I) Novel Video Analysis:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#i-novel-video-analysis-extra-features">
+     (I) Novel Video Analysis: extra features
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dynamic-cropping-of-videos">
+       Dynamic-cropping of videos:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#filter-data-recommended">
+       Filter data (RECOMMENDED!):
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#plot-trajectories">
+       Plot Trajectories:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-labeled-videos">
+       Create Labeled Videos:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extract-skeleton-features">
+     Extract “Skeleton” Features:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#j-optional-active-learning-network-refinement-extract-outlier-frames">
+     (J) Optional Active Learning -&gt; Network Refinement: Extract Outlier Frames
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#k-refine-labels-augmentation-of-the-training-dataset">
+     (K) Refine Labels: Augmentation of the Training Dataset
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-notebooks-for-demonstration-of-the-deeplabcut-workflow">
+     Jupyter Notebooks for Demonstration of the DeepLabCut Workflow
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#d-toolbox">
+   3D Toolbox
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-functions-some-are-yet-to-be-documented">
+   Other functions, some are yet-to-be-documented:
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="deeplabcut-user-guide-for-single-animal-projects">
+  <div class="tex2jax_ignore mathjax_ignore section" id="deeplabcut-user-guide-for-single-animal-projects">
 <h1>DeepLabCut User Guide (for single animal projects)<a class="headerlink" href="#deeplabcut-user-guide-for-single-animal-projects" title="Permalink to this headline">¶</a></h1>
-<p>This document covers single/standard DeepLabCut use. If you have a complicated multi-animal scenario (i.e., they look the same), then please see our [maDLC user guide]((<a class="reference external" href="https://github.com/DeepLabCut/DeepLabCut/blob/master//docs/maDLC_UserGuide.md">https://github.com/DeepLabCut/DeepLabCut/blob/master//docs/maDLC_UserGuide.md</a>).</p>
+<p>This document covers single/standard DeepLabCut use. If you have a complicated multi-animal scenario (i.e., they look the same), then please see our <a class="reference external" href="https://github.com/DeepLabCut/DeepLabCut/blob/master//docs/maDLC_UserGuide.md">maDLC user guide</a>.</p>
 <p>To get started, you can use the GUI, or the terminal. See below.</p>
 <div class="section" id="deeplabcut-project-manager-gui-recommended-for-beginners">
 <h2>DeepLabCut Project Manager GUI (recommended for beginners)<a class="headerlink" href="#deeplabcut-project-manager-gui-recommended-for-beginners" title="Permalink to this headline">¶</a></h2>
 <p><strong>GUI:</strong>
-Simply <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">deeplabcut</span></code> or MacOS: <code class="docutils literal notranslate"><span class="pre">pythonw</span> <span class="pre">-m</span> <span class="pre">deeplabcut</span></code>. The below functions are available to you in an easy-to-use graphical user interface. While most functionality is available, advanced users might want the additional flexibility that command line interface offers. Read more [here]((<a class="reference external" href="https://github.com/DeepLabCut/DeepLabCut/blob/master//docs/PROJECT_GUI.md">https://github.com/DeepLabCut/DeepLabCut/blob/master//docs/PROJECT_GUI.md</a>).</p>
+Simply <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">deeplabcut</span></code> or MacOS: <code class="docutils literal notranslate"><span class="pre">pythonw</span> <span class="pre">-m</span> <span class="pre">deeplabcut</span></code>. The below functions are available to you in an easy-to-use graphical user interface. While most functionality is available, advanced users might want the additional flexibility that command line interface offers. Read more <a class="reference external" href="https://github.com/DeepLabCut/DeepLabCut/blob/master//docs/PROJECT_GUI.md">here</a>.</p>
 <p align="center">
 <img src="https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1572824438905-QY9XQKZ8LAJZG6BLPWOQ/ke17ZwdGBToddI8pDm48kIIa76w436aRzIF_cdFnEbEUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcLthF_aOEGVRewCT7qiippiAuU5PSJ9SSYal26FEts0MmqyMIhpMOn8vJAUvOV4MI/guilaunch.jpg?format=1000w" width="60%">
 </p>
@@ -465,8 +614,8 @@ Simply <code class="docutils literal notranslate"><span class="pre">python</span
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">deeplabcut</span><span class="o">.</span><span class="n">create_new_project</span><span class="p">(</span><span class="s1">&#39;Name of the project&#39;</span><span class="p">,</span> <span class="s1">&#39;Name of the experimenter&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Full path of video 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Full path of video2&#39;</span><span class="p">,</span> <span class="s1">&#39;Full path of video3&#39;</span><span class="p">],</span> <span class="n">working_directory</span><span class="o">=</span><span class="s1">&#39;Full path of the working directory&#39;</span><span class="p">,</span> <span class="n">copy_videos</span><span class="o">=</span><span class="kc">True</span><span class="o">/</span><span class="kc">False</span><span class="p">,</span> <span class="n">multianimal</span><span class="o">=</span><span class="kc">True</span><span class="o">/</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="important-path-formating-note">
-<h4>Important path formating note:<a class="headerlink" href="#important-path-formating-note" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="important-path-formatting-note">
+<h4>Important path formatting note:<a class="headerlink" href="#important-path-formatting-note" title="Permalink to this headline">¶</a></h4>
 <p>Windows users, you must input paths as: <code class="docutils literal notranslate"><span class="pre">r'C:\Users\computername\Videos\reachingvideo1.avi'</span> </code> or</p>
 <p><code class="docutils literal notranslate"> <span class="pre">'C:\\Users\\computername\\Videos\\reachingvideo1.avi'</span></code></p>
 <p>(TIP: you can also place <code class="docutils literal notranslate"><span class="pre">config_path</span></code> in front of <code class="docutils literal notranslate"><span class="pre">deeplabcut.create_new_project</span></code> to create a variable that holds the path to the config.yaml file, i.e. <code class="docutils literal notranslate"><span class="pre">config_path=deeplabcut.create_new_project(...)</span></code>)</p>
@@ -600,7 +749,7 @@ are listed in Box 2.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deterministic</span></code>: only useful for testing, freezes numpy seed; otherwise like default.</p></li>
 </ul>
 <p>Alternatively, you can set the loader (as well as other training parameters) in the <strong>pose_cfg.yaml</strong> file of the model that you want to train. Note, to get details on the options, look at the default file: <a class="reference external" href="https://github.com/AlexEMG/DeepLabCut/blob/master/deeplabcut/pose_cfg.yaml"><strong>pose_cfg.yaml</strong></a>.</p>
-<p><strong>MODEL COMPARISION:</strong> You can also test several models by creating the same test/train split for different networks. You can easily do this in the Project Manager GUI, or use the function <code class="docutils literal notranslate"><span class="pre">deeplabcut.create_training_model_comparison(</span></code> (<a class="reference external" href="https://github.com/AlexEMG/DeepLabCut/wiki/DOCSTRINGS#or-use-create_training_model_comparison">check the docstring for more details!</a>).</p>
+<p><strong>MODEL COMPARISON:</strong> You can also test several models by creating the same test/train split for different networks. You can easily do this in the Project Manager GUI, or use the function <code class="docutils literal notranslate"><span class="pre">deeplabcut.create_training_model_comparison(</span></code> (<a class="reference external" href="https://github.com/AlexEMG/DeepLabCut/wiki/DOCSTRINGS#or-use-create_training_model_comparison">check the docstring for more details!</a>).</p>
 <p>Please also see our helper WIKI on selecting models: <a class="reference external" href="https://github.com/AlexEMG/DeepLabCut/wiki/What-neural-network-should-I-use%3F">https://github.com/AlexEMG/DeepLabCut/wiki/What-neural-network-should-I-use?</a></p>
 <p>See Box 2 on how to specify <strong>which network is loaded for training (including your own network, etc):</strong></p>
 <p align="center">
@@ -639,7 +788,7 @@ trainingsetindex: int, optional
 gputouse: int, optional. Natural number indicating the number of your GPU (see number in nvidia-smi). If you do not have a GPU, put None.
 See: https://nvidia.custhelp.com/app/answers/detail/a_id/3751/~/useful-nvidia-smi-queries
 
-max_snapshots_to_keep: int, or None. Sets how many snapshots are kept, i.e. states of the trained network. For every saving interation a snapshot is stored, however, only the last max_snapshots_to_keep many are kept! If you change this to None, then all are kept.
+max_snapshots_to_keep: int, or None. Sets how many snapshots are kept, i.e. states of the trained network. For every saving iteration a snapshot is stored, however, only the last max_snapshots_to_keep many are kept! If you change this to None, then all are kept.
 See: https://github.com/AlexEMG/DeepLabCut/issues/8#issuecomment-387404835
 
 autotune: property of TensorFlow, somehow faster if &#39;false&#39; (as Eldar found out, see https://github.com/tensorflow/tensorflow/issues/13317). Default: False
@@ -878,7 +1027,7 @@ list (<code class="docutils literal notranslate"><span class="pre">extractionalg
 <p>(A) Visible body part with accurate DeepLabCut prediction. These labels do not need any modifications.</p>
 <p>(B) Visible body part but wrong DeepLabCut prediction. Move the label’s location to the actual position of the
 body part.</p>
-<p>(C) Invisible, occluded body part. Remove the predicted label by DeepLabCut with a right click. Every predicted
+<p>(C) Invisible, occluded body part. Remove the predicted label by DeepLabCut with a middle click. Every predicted
 label is shown, even when DeepLabCut is uncertain. This is necessary, so that the user can potentially move
 the predicted label. However, to help the user to remove all invisible body parts the low-likelihood predictions
 are shown as open circles (rather than disks).</p>
@@ -890,7 +1039,7 @@ as invalid.</p>
 </pre></div>
 </div>
 <p>This will launch a GUI where the user can refine the labels.</p>
-<p>Use the ‘Load Labels’ button to select one of the subdirectories, where the extracted frames are stored. Every label will be identified by a unique color. For better chances to identify the low-confidence labels, specify the threshold of the likelihood. This changes the body parts with likelihood below this threshold to appear as circles and the ones above as solid disks while retaining the same color scheme. Next, to adjust the position of the label, hover the mouse over the labels to identify the specific body part, left click and drag it to a different location. To delete a specific label, right click on the label (once a label is deleted, it cannot be retrieved).</p>
+<p>Use the ‘Load Labels’ button to select one of the subdirectories, where the extracted frames are stored. Every label will be identified by a unique color. For better chances to identify the low-confidence labels, specify the threshold of the likelihood. This changes the body parts with likelihood below this threshold to appear as circles and the ones above as solid disks while retaining the same color scheme. Next, to adjust the position of the label, hover the mouse over the labels to identify the specific body part, left click and drag it to a different location. To delete a specific label, middle click on the label (once a label is deleted, it cannot be retrieved).</p>
 <p>After correcting the labels for all the frames in each of the subdirectories, the users should merge the data set to
 create a new dataset. In this step the iteration parameter in the config.yaml file is automatically updated.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">deeplabcut</span><span class="o">.</span><span class="n">merge_datasets</span><span class="p">(</span><span class="n">config_path</span><span class="p">)</span>
@@ -947,58 +1096,46 @@ labels for these images are also provided. See more details [here]((<a class="re
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="docker.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">DeepLabCut Docker containers</p>
-            </div>
-        </a>
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="docker.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">DeepLabCut Docker containers</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="maDLC_UserGuide.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">DeepLabCut for Multi-Animal Projects</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="maDLC_UserGuide.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">DeepLabCut for Multi-Animal Projects</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By The DeepLabCut Team<br/>
-        
-            &copy; Copyright 2021.<br/>
-          <div class="extra_footer">
-            <div>Powered by <a href="https://jupyterbook.org/">Jupyter Book</a>.</div>
+  <p>
+    
+      By The DeepLabCut Team<br/>
+    
+        &copy; Copyright 2021.<br/>
+      <div class="extra_footer">
+        <div>Powered by <a href="https://jupyterbook.org/">Jupyter Book</a>.</div>
 
-          </div>
-      </p>
-    </div>
-  </footer>
+      </div>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

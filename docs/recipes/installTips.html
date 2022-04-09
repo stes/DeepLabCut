@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Installation Tips &#8212; DeepLabCut</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -31,30 +31,35 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Input/output manipulations with DeepLabCut" href="io.html" />
     <link rel="prev" title="Helper &amp; Advanced Optional Function Documentation" href="../HelperFunctions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -93,7 +98,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Main Documentation
  </span>
@@ -140,7 +145,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Tutorials
  </span>
@@ -162,7 +167,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Recipes
  </span>
@@ -203,8 +208,13 @@
    How to write a DLC Methods Section
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OpenVINO.html">
+   Intel OpenVINO backend
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Mission &amp; Contribute
  </span>
@@ -267,7 +277,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -301,7 +311,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -374,6 +384,11 @@
    How to confirm that your GPU is being used by DeepLabCut
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-install-deeplabcut-for-intel-and-amd-gpus-on-windows">
+   How to install DeepLabCut for Intel and  AMD GPUs on Windows
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -382,10 +397,99 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Installation Tips</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-use-the-latest-updates-directly-from-github">
+   How to use the latest updates directly from GitHub
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-pull-and-install-from-the-github-repository">
+     Quick pull and install from the github repository
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation-on-ubuntu-18-04-lts">
+   Installation on Ubuntu 18.04 LTS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#here-are-our-tips-for-an-easy-installation-this-is-done-on-a-fresh-computer-installation-ubuntu-18-04-lts">
+     Here are our tips for an easy installation. This is done on a fresh computer installation (Ubuntu 18.04 LTS)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation-on-ubuntu-20-04-lts">
+   Installation on Ubuntu 20.04 LTS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#let-s-start-with-cuda-support-for-your-gpu">
+     Let’s start with CUDA support for your GPU:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#next-docker">
+     Next, Docker!
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#next-anaconda">
+     Next, Anaconda!
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#next-deeplabcut">
+     Next, DeepLabCut!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#troubleshooting-note-if-you-get-a-failed-build-due-to-wxpython-note-this-does-not-happen-on-ubuntu-18-16-etc-i-e">
+   Troubleshooting: Note, if you get a failed build due to wxPython (note, this does not happen on Ubuntu 18, 16, etc), i.e.:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deeplabcut-m1-chip-installation-environment-instructions">
+   DeepLabCut M1 chip installation environment instructions:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-confirm-that-your-gpu-is-being-used-by-deeplabcut">
+   How to confirm that your GPU is being used by DeepLabCut
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-install-deeplabcut-for-intel-and-amd-gpus-on-windows">
+   How to install DeepLabCut for Intel and  AMD GPUs on Windows
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="installation-tips">
+  <div class="tex2jax_ignore mathjax_ignore section" id="installation-tips">
 <h1>Installation Tips<a class="headerlink" href="#installation-tips" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="how-to-use-the-latest-updates-directly-from-github">
 <h2>How to use the latest updates directly from GitHub<a class="headerlink" href="#how-to-use-the-latest-updates-directly-from-github" title="Permalink to this headline">¶</a></h2>
@@ -665,13 +769,29 @@ For more examples and ideas, visit:
 <p>During training and analysis steps, DeepLabCut does not use the GPU processor heavily. To confirm that DeepLabCut is properly using your GPU:</p>
 <p><strong>On Windows</strong>:</p>
 <p>(1) Open the task manager. If it looks like the image below, click on “More Details”</p>
-<img src="https://github.com/backyardbiomech/docImages/blob/main/DeepLabCut/taskManager.png" width="50%">
+<p><img alt="" src="https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/a0db3157-2228-4444-8084-36801659f272/installBrandon1.png?format=500w" /></p>
 <p>(2) That will bring up the following, which still isn’t helpful and has caused confusion for users. The %GPU does not reflect DeepLabCut usage.</p>
-<img src="https://github.com/backyardbiomech/docImages/blob/main/DeepLabCut/TaskManagerDetails.png" width="50%">
+<p><img alt="" src="https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/117e3573-60bb-4599-b00b-c75276b24173/installBrandon2.png?format=500w" /></p>
 <p>(3) Click on the <strong>Performance</strong> tab. On that page, click on the small arrow under GPU (it might start as <strong>3D</strong>, and change it to <strong>CUDA</strong>.</p>
 <p>(4) During training, you should see the <strong>Dedicated GPU memory usage</strong> increase to near maximum, and you should see some activity in the <strong>CUDA</strong> graph. The graph below is the activity while running <code class="docutils literal notranslate"><span class="pre">testscript.py</span></code>.</p>
-<img src="https://github.com/backyardbiomech/docImages/blob/main/DeepLabCut/taskManagerTraining.png" width="70%">
+<p><img alt="" src="https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/b1d03ca0-f8ba-4a31-a399-6e86856c81b0/installBrandon3.png?format=500w" /></p>
 <p>(5) If you don’t see activity there during training, then your GPU is likely not installed correctly for DeepLabCut. Return to the installation instructions, and be sure you installed CUDA 11+, and ran <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">cudnn</span> <span class="pre">-c</span> <span class="pre">conda-forge</span></code> after installing DeepLabCut.</p>
+</div>
+<div class="section" id="how-to-install-deeplabcut-for-intel-and-amd-gpus-on-windows">
+<h2>How to install DeepLabCut for Intel and  AMD GPUs on Windows<a class="headerlink" href="#how-to-install-deeplabcut-for-intel-and-amd-gpus-on-windows" title="Permalink to this headline">¶</a></h2>
+<p>If you are on Windows 10/11 and have a DirectX 12 compatible GPU from any vendor (AMD, Intel, or Nvidia), you utilise GPU accelleration for inference, with an installation that is consistent between devices. This method uses <a class="reference external" href="https://github.com/microsoft/tensorflow-directml">Tensorflow-directml</a> which uses DirectML instead of Cuda for ML training and inference.</p>
+<p>To check the DirectX version of your installed GPU, type in dxdiag into windows search and select the run command. In system information, the bottom item of the list shows your DirectX version. In addition to this ensure your standard GPU drivers are up-to-date. Updating drivers by any official means (Nvidia Geforce experience, AMD radeon software, direct from the vendor website) is fine.</p>
+<p>The following instructions are using conda and pip for environment management, executing within the Anaconda prompt program that was installed along with Anaconda python. The # lines are not to be typed, they are for guidance.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda create --name dlc_dml <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
+conda activate dlc_dml
+<span class="c1">#specific versions noted that are validated as of DLC 2.2.0.6, but other versions may work:</span>
+pip install <span class="s1">&#39;deeplabcut[gui]&#39;</span><span class="o">==</span><span class="m">2</span>.2.0.6
+pip install tensorflow-directml<span class="o">==</span><span class="m">1</span>.15.5
+pip install pip install <span class="nv">imageio</span><span class="o">==</span><span class="m">2</span>.9.0
+conda install <span class="nv">ffmpeg</span><span class="o">==</span><span class="m">4</span>.2.2
+</pre></div>
+</div>
+<p>Attention: Please note the order of execution of these commands are important, as pip’s dependency manager may change package versions to incorrect ones if done in the wrong version.</p>
 </div>
 </div>
 
@@ -697,58 +817,46 @@ For more examples and ideas, visit:
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="../HelperFunctions.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Helper &amp; Advanced Optional Function Documentation</p>
-            </div>
-        </a>
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../HelperFunctions.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Helper &amp; Advanced Optional Function Documentation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="io.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Input/output manipulations with DeepLabCut</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="io.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Input/output manipulations with DeepLabCut</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By The DeepLabCut Team<br/>
-        
-            &copy; Copyright 2021.<br/>
-          <div class="extra_footer">
-            <div>Powered by <a href="https://jupyterbook.org/">Jupyter Book</a>.</div>
+  <p>
+    
+      By The DeepLabCut Team<br/>
+    
+        &copy; Copyright 2021.<br/>
+      <div class="extra_footer">
+        <div>Powered by <a href="https://jupyterbook.org/">Jupyter Book</a>.</div>
 
-          </div>
-      </p>
-    </div>
-  </footer>
+      </div>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
