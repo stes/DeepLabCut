@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Helper &amp; Advanced Optional Function Documentation" href="HelperFunctions.html" />
+    <link rel="next" title="Input/output manipulations with DeepLabCut" href="recipes/io.html" />
     <link rel="prev" title="Multi-animal pose estimation with DeepLabCut: A 5-minute tutorial" href="tutorial.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -108,25 +108,37 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    DeepLabCut Documentation
+                <a class="reference internal" href="../README.html">
+                    Installation: how to install DeepLabCut
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Main Documentation
+  Getting Started
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="UseOverviewGuide.html">
-   Documentation Overview:
+   Documentation Overview
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Installation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="installation.html">
    How To Install DeepLabCut
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recipes/installTips.html">
+   Installation Tips
   </a>
  </li>
  <li class="toctree-l1">
@@ -134,6 +146,13 @@ const thebe_selector_output = ".output, .cell_output"
    DeepLabCut Docker containers
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  User Guides
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="standardDeepLabCut_UserGuide.html">
    DeepLabCut User Guide (for single animal projects)
@@ -145,19 +164,82 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="PROJECT_GUI.html">
-   Interactive Project Manager GUI
+  <a class="reference internal" href="Overviewof3D.html">
+   3D DeepLabCut
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Overviewof3D.html">
-   3D DeepLabCut
+  <a class="reference internal" href="HelperFunctions.html">
+   Helper &amp; Advanced Optional Function Documentation
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Tutorials
+  Graphical User Interfaces (GUIs)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="PROJECT_GUI.html">
+   Interactive Project Manager GUI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="napariGUI.html">
+   napari labeling GUI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recipes/ClusteringNapari.html">
+   Clustering in the napari-DeepLabCut GUI
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DeepLabCut-Live!
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="deeplabcutlive.html">
+   DeepLabCut-Live!
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  DeepLabCut Model Zoo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="recipes/UsingModelZooPupil.html">
+   Using ModelZoo models on your own datasets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recipes/MegaDetectorDLCLive.html">
+   💚 MegaDetector+DeepLabCut 💜
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Hardware
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="recipes/TechHardware.html">
+   Technical (Hardware) Considerations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials &amp; Cookbook
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -169,23 +251,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    How to convert a pre-2.2 project for use with DeepLabCut 2.2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="HelperFunctions.html">
-   Helper &amp; Advanced Optional Function Documentation
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Recipes
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="recipes/installTips.html">
-   Installation Tips
   </a>
  </li>
  <li class="toctree-l1">
@@ -209,11 +274,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="recipes/TechHardware.html">
-   Technical (Hardware) Considerations
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="recipes/DLCMethods.html">
    How to write a DLC Methods Section
   </a>
@@ -221,6 +281,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="recipes/OpenVINO.html">
    Intel OpenVINO backend
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recipes/flip_and_rotate.html">
+   Improving network performance on unbalanced data via augmentation 🦇
   </a>
  </li>
 </ul>
@@ -420,8 +485,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="how-to-convert-a-pre-2-2-project-for-use-with-deeplabcut-2-2">
-<h1>How to convert a pre-2.2 project for use with DeepLabCut 2.2<a class="headerlink" href="#how-to-convert-a-pre-2-2-project-for-use-with-deeplabcut-2-2" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-convert-a-pre-2-2-project-for-use-with-deeplabcut-2-2">
+<span id="convert-madlc"></span><h1>How to convert a pre-2.2 project for use with DeepLabCut 2.2<a class="headerlink" href="#how-to-convert-a-pre-2-2-project-for-use-with-deeplabcut-2-2" title="Permalink to this headline">#</a></h1>
 <img src="https://images.squarespace-cdn.com/content/v1/57f6d51c9f74566f55ecf271/1572296495650-Y4ZTJ2XP2Z9XF1AD74VW/ke17ZwdGBToddI8pDm48kMulEJPOrz9Y8HeI7oJuXxR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UZiU3J6AN9rgO1lHw9nGbkYQrCLTag1XBHRgOrY8YAdXW07ycm2Trb21kYhaLJjddA/DLC_logo_blk-01.png?format=1000w" width="150" title="DLC" alt="DLC!" align="right" vspace = "50">
 <p>If you have a pre-2.2 project (<code class="docutils literal notranslate"><span class="pre">labeled-data</span></code>) with a <strong>single animal</strong> that you want to use with a multianimal project in DLC 2.2, i.e. use your older data to now train the new multi-task deep neural network, here is what you need to do.</p>
 <p>(1) We recommend you make a back-up of your project folder.</p>
@@ -521,10 +586,10 @@ title="Print to PDF"
             <p class="prev-next-title">Multi-animal pose estimation with DeepLabCut: A 5-minute tutorial</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="HelperFunctions.html" title="next page">
+    <a class='right-next' id="next-link" href="recipes/io.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Helper &amp; Advanced Optional Function Documentation</p>
+        <p class="prev-next-title">Input/output manipulations with DeepLabCut</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

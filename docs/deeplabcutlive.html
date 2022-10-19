@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>A development roadmap for DeepLabCut &#8212; DeepLabCut</title>
+    <title>DeepLabCut-Live! &#8212; DeepLabCut</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Governance Model of DeepLabCut" href="Governance.html" />
-    <link rel="prev" title="Mission and Values of DeepLabCut" href="MISSION_AND_VALUES.html" />
+    <link rel="next" title="Using ModelZoo models on your own datasets" href="recipes/UsingModelZooPupil.html" />
+    <link rel="prev" title="Clustering in the napari-DeepLabCut GUI" href="recipes/ClusteringNapari.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -201,9 +201,9 @@ const thebe_selector_output = ".output, .cell_output"
   DeepLabCut-Live!
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="deeplabcutlive.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    DeepLabCut-Live!
   </a>
  </li>
@@ -294,14 +294,14 @@ const thebe_selector_output = ".output, .cell_output"
   Mission &amp; Contribute
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="MISSION_AND_VALUES.html">
    Mission and Values of DeepLabCut
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="roadmap.html">
    A development roadmap for DeepLabCut
   </a>
  </li>
@@ -396,7 +396,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/DeepLabCut/DeepLabCut/issues/new?title=Issue%20on%20page%20%2Fdocs/roadmap.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/DeepLabCut/DeepLabCut/issues/new?title=Issue%20on%20page%20%2Fdocs/deeplabcutlive.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -424,7 +424,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/roadmap.md"
+        <a href="../_sources/docs/deeplabcutlive.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -473,7 +473,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>A development roadmap for DeepLabCut</h1>
+                <h1>DeepLabCut-Live!</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -485,60 +485,17 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="a-development-roadmap-for-deeplabcut">
-<h1>A development roadmap for DeepLabCut<a class="headerlink" href="#a-development-roadmap-for-deeplabcut" title="Permalink to this headline">#</a></h1>
-<p>:loudspeaker: :hourglass_flowing_sand: :construction:</p>
-<p><strong>deeplabcut 2.2: multi-animal pose estimation and tracking with DeepLabCut</strong></p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> alpha testing complete (early May 2020)</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> beta release: 2.2.b5 on 5 / 22 / 20 :smile:</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> beta release: 2.2b8 released 9/2020 :smile:</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> beta release 2.2b9 (rolled into 2.1.9 –&gt; candidate release, slotted for Oct 2020)</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> 2.2rc1</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> 2.2rc2</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> 2.2rc3</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Manuscript Lauer et al 2021 <a class="reference external" href="https://www.biorxiv.org/content/10.1101/2021.04.30.442096v1">https://www.biorxiv.org/content/10.1101/2021.04.30.442096v1</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> full 2.2 stable release</p></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="deeplabcut-live">
+<h1>DeepLabCut-Live!<a class="headerlink" href="#deeplabcut-live" title="Permalink to this headline">#</a></h1>
+<p>We provide two additional pip packages that allow you to record and stream camera data and run DeeplabCut models in real-time.
+You can get an indepth overview of this work in <a class="reference external" href="https://elifesciences.org/articles/61909">Kane et al, 2020 eLife</a>.</p>
+<p>Here is information on the DLC-Live! Camera GUI:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/DeepLabCut/DeepLabCut-live-GUI">DLC-Live! Camera GUI</a></p></li>
 </ul>
-<p><strong>real-time module with DEMO for how to set up on your camera system, integration with our [Camera Control Software]</strong>(<a class="reference external" href="https://github.com/AdaptiveMotorControlLab/Camera_Control">https://github.com/AdaptiveMotorControlLab/Camera_Control</a>)</p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Integration with Bonsai completed! See: <a class="reference external" href="https://github.com/bonsai-rx/deeplabcut">https://github.com/bonsai-rx/deeplabcut</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Integreation with Auto-pi-lot. See: <a class="reference external" href="https://auto-pi-lot.com/">https://auto-pi-lot.com/</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> DeepLabCut-live! released Aug 5th, 2020: preprint &amp; code: <a class="reference external" href="https://www.biorxiv.org/content/10.1101/2020.08.04.236422v1">https://www.biorxiv.org/content/10.1101/2020.08.04.236422v1</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> DeepLabCut-live! published in eLife</p></li>
-</ul>
-<p><strong>DeepLabCut Model Zoo: a collection of pretrained models for plug-in-play DLC and community crowd-sourcing.</strong></p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> BETA release with 2.1.8b0: <a class="reference external" href="http://www.mousemotorlab.org/dlc-modelzoo">http://www.mousemotorlab.org/dlc-modelzoo</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> full release with 2.1.8.1 <a class="reference external" href="http://www.mousemotorlab.org/dlc-modelzoo">http://www.mousemotorlab.org/dlc-modelzoo</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Manuscript forthcoming!</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> new models added; horse, cheetah</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TopView_Mouse model</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> contribution module</p></li>
-</ul>
-<p><strong>DeepLabCut GUI and DeepLabCut-core:</strong></p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> to make DLC more modular, we will move core functions to <a class="reference external" href="https://github.com/DeepLabCut/DeepLabCut-core">https://github.com/DeepLabCut/DeepLabCut-core</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> DLC-core depreciated, and core is now simply <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">deeplabcut</span></code> GUI is with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">deeplabcut[gui]</span></code></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> new GUI for DeepLabCut; due to extended issues with wxPython, we will be moving to release a napari plugin <a class="reference external" href="https://github.com/napari/napari">https://github.com/napari/napari</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> New project management GUI</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> tensorflow 2.2 support in DeepLabCut-core: <a class="reference external" href="https://github.com/DeepLabCut/DeepLabCut/issues/601">https://github.com/DeepLabCut/DeepLabCut/issues/601</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> DeepLabCut-Core to be depreciated; TF2 will go into main repo.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> TF2 support while also maintaining TF1 support until 2022.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Web-based GUI for labeling –&gt; Colab training pipeline for users (full no-install DLC)</p></li>
-</ul>
-<p><strong>General NN Improvements:</strong></p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> EfficientNet backbones added (currently SOTA on ImageNet). <a class="reference external" href="https://openaccess.thecvf.com/content/WACV2021/html/Mathis_Pretraining_Boosts_Out-of-Domain_Robustness_for_Pose_Estimation_WACV_2021_paper.html">https://openaccess.thecvf.com/content/WACV2021/html/Mathis_Pretraining_Boosts_Out-of-Domain_Robustness_for_Pose_Estimation_WACV_2021_paper.html</a> <a class="reference external" href="https://github.com/DeepLabCut/DeepLabCut/commit/96da2cacf837a9b84ecdeafb50dfb4a93b402f33">https://github.com/DeepLabCut/DeepLabCut/commit/96da2cacf837a9b84ecdeafb50dfb4a93b402f33</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> New multi-fusion multi-scale networks; DLCRNet_ms5</p></li>
-</ul>
-<p><strong>General Enhancements:</strong></p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> DeepLabCut PyTorch model zoo</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> DLC-CookBook v0.1</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> DLC BLog for releases and user-highlights</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> New Docker containers into main repo / linked to Docker hub and repo(s)</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> 3D &gt;2 camera support</p></li>
+<p>Here is information on the DLC-Live! software SDK:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/DeepLabCut/DeepLabCut-live">DLC-Live! Software</a></p></li>
 </ul>
 </section>
 
@@ -569,17 +526,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="MISSION_AND_VALUES.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="recipes/ClusteringNapari.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Mission and Values of DeepLabCut</p>
+            <p class="prev-next-title">Clustering in the napari-DeepLabCut GUI</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Governance.html" title="next page">
+    <a class='right-next' id="next-link" href="recipes/UsingModelZooPupil.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Governance Model of DeepLabCut</p>
+        <p class="prev-next-title">Using ModelZoo models on your own datasets</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
